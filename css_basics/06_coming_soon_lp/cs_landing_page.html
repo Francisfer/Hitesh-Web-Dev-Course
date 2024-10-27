@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francisco landing page</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Wrapping everything inside of a container is always easy for styling purposes -->
+    <main class="container">
+      <!-- Inside this container we can have as many blocks as we want. We give it the class of content keeping the future in mind.
+      The client might want to add another block of content and we already have the class ready. It is also useful if he wants a photo on one side and the content on another etc. 
+      -->
+      <div class="content">
+        <img
+          src="../../images/spaceship.png"
+          alt="Image saying coming soon"
+          height="300"
+        />
+        <h1>Coming soon</h1>
+        <p>We're working hard to bring something amazing. Stay tuned!</p>
+
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Notify Me</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
