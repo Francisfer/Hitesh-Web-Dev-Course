@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Different types of selectors</title>
+
+    <!-- The objective of this lesson is to learn about the descendants and the child's elements and how to select them.  -->
+    <style>
+      /* 1. UNIVERSAL SELECTOR - Used to do the css reset, which is done in every css framework. */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 2. TYPE SELECTOR - To select the elements by type, all the p, all the a... */
+
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      /* 3. CLASS SELECTOR */
+      .highlight {
+        background-color: #21a2c9;
+      }
+      /* 4. ID SELECTOR */
+      #header {
+        background-color: #860303;
+      }
+      /* 5. ATTRIBUTE SELECTOR - We need to select the element that has that attribute that we want to target, optionally also including the value. */
+      input[type="text"] {
+        border: 2px solid #21a2c9;
+      }
+
+      /* IN 80% OF THE PROFESSIONAL WORK WITH CSS FRAMEWORKS, THIS IS WHERE WE KNOW ENOUGH, THE REST ARE USED FOR MORE AND ADVANCED USE CASES */
+
+      /* 6. 
+      DESCENDANT SELECTOR - We just use a blank space to select the descendant of an element.
+      In this case we are selecting the p, which is a descendant of the article element.
+      For this reason, when we are reading a css selector we shout try to read it from right to left.
+      In this case we would read "all the p which are descendants of article".
+      The level DOES NOT MATTER - If we have a p inside of a div (had to change the code to be another element - section), although it is not a direct child of article, it is still a descendant. 
+       */
+
+      article p {
+        font-style: italic;
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 10px;
+      }
+
+      /* 7. CHILD SELECTOR - Selects ALL the DIRECT child elements. Not so clear with lists */
+      div > p {
+        background-color: #880404;
+      }
+
+      /* 8. 
+      ADJACENT SIBLING SELECTOR - Selects the adjacent (next to) sibling of an element.
+      All the p which are next to the h1.
+      */
+
+      h1 + p {
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      /* 9. 
+      GENERAL SIBLING SELECTOR - Selects all the siblings of an element, not only if it is next to it.
+      In this case we want all the p that are general siblings of the h2. 
+      The order of the code matters, otherwise we would change the color of all the p that are at the same level of the h2.
+      Like this we only consider the ones that come after the h2.
+      */
+
+      h2 ~ p {
+        color: #860303;
+      }
+
+      /* 10. 
+      PSEUDO-CLASS SELECTOR - This one will be used a lot. Some elements on html have behaviors.
+      Different behaviors when we select the input, when we hover over and we can control this with pseudo-class selectors.
+      */
+
+      a:hover {
+        background-color: #14a50e;
+        text-decoration: none;
+        color: #1a1a1a;
+        padding: 5px;
+        margin: 4px;
+      }
+
+      /* 11. 
+      PSEUDO-ELEMENT SELECTOR - ::before and ::after are very used on styling websites. Here he just use it to select the first letter of all the p elements.
+      */
+
+      p::first-letter {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      /* 12. GROUPING SELECTOR - The use of the comma (,) */
+      h1,
+      h2,
+      h3 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">This is the header</header>
+
+    <h1>Main Heading</h1>
+    <p>
+      This paragraph is adjacent to h1 and demonstrates the adjacent sibling
+      selector.
+    </p>
+    <p>
+      This is a regular paragraph showing the type selector. Since with
+      selecting by type we need to write the p element itself we've just set the
+      margin and padding.
+    </p>
+
+    <p class="highlight">
+      This paragraph has a highlight class, demonstrating the class selector.
+    </p>
+
+    <input type="text" placeholder="Enter text here" />
+
+    <article>
+      <p>
+        This paragraph is inside an article, showing the descendant selector.
+      </p>
+      <p>
+        This paragraph is inside an article, showing the descendant selector.
+      </p>
+      <section>
+        <p>
+          This paragraph is inside of a section element, which is inside of an
+          article. Although it is not a direct child it still gets the same
+          formatting.
+        </p>
+      </section>
+    </article>
+
+    <div>
+      <p>I am a Child</p>
+      <p>I am a Child</p>
+      <section>
+        <p>I am a Descendant</p>
+      </section>
+      <p>I am a Child</p>
+    </div>
+
+    <h2>Sub Heading</h2>
+    <p>
+      This is a sibling paragraph to h2, demonstrating the general sibling
+      selector.
+    </p>
+    <div>This is a sibling div to h2.</div>
+    <p>This is another sibling paragraph to h2.</p>
+
+    <a href="#">Hover over me to see the pseudo-class selector in action</a>
+
+    <p>
+      This paragraph demonstrates pseudo-element selectors with a styled first
+      line and first letter.
+    </p>
+
+    <h3>Heading 3</h3>
+
+    <p>
+      The headings h1, h2, and h3 use the grouping selector for consistent font
+      family.
+    </p>
+  </body>
+</html>
