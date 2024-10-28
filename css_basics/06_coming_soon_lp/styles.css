@@ -1,5 +1,4 @@
-body,
-html {
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -8,4 +7,64 @@ html {
 
 .container {
   background: linear-gradient(135deg, #8a2be2, #4169e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  background-color: rgba(41, 38, 38, 0.9);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
+
+img {
+  width: 150px;
+  object-fit: contain;
+}
+
+h1 {
+  color: #a1a1d1;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #7575c6;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: inherit;
+}
+
+button {
+  padding: 0.5rem;
+  background-color: #8a2be2;
+  color: #eaeaea;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background-color: #9460c4;
+}
+button:active {
+  transform: translateY(1px);
 }
