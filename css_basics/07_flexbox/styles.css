@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(145, 139, 139);
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #222020;
+}
+
+/* Typical container to separate content */
+.container {
+  background-color: #7a7a7a;
+  border: 2px solid #333;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Class that just changes the display to flex */
+.flex-container {
+  display: flex;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.pastel-1 {
+  background-color: #ffb3ba;
+}
+.pastel-2 {
+  background-color: #baffc9;
+}
+.pastel-3 {
+  background-color: #bae1ff;
+}
+.pastel-4 {
+  background-color: #ffffba;
+}
+.pastel-5 {
+  background-color: #ffdfba;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-content-space_around {
+  align-content: space-around;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
