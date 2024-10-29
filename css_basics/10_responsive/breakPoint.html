@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+
+    <style>
+      body {
+        background-color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .responsive-div {
+        width: 100%;
+        max-width: 1200px;
+        color: #fff;
+        background-color: #c13131;
+        font-size: 26px;
+      }
+
+      /* MEDIA QUERIES - I want to do something on this breakpoint. 
+      They must be done on the code containers (Where we previously wrote what we want to change). */
+
+      /* MAX-WIDTH */
+      @media (max-width: 600px) {
+        body {
+          align-items: flex-start;
+        }
+
+        .responsive-div {
+          background-color: #3498db;
+        }
+      }
+
+      /* MIN-WIDTH - If we didn't provide the "and", the default styles would never apply because the min-width query would be active for all widths above 601.*/
+
+      /* Even so, the default styles only apply because, when we reach the 1024px there is no more rules to follow. */
+
+      @media (min-width: 601px) and (max-width: 1024px) {
+        body {
+          align-items: flex-end;
+        }
+
+        .responsive-div {
+          background-color: #18f518;
+          color: #1a1a1a;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="responsive-div">
+      <p>This div changes color based on the screen size.</p>
+    </div>
+  </body>
+</html>
