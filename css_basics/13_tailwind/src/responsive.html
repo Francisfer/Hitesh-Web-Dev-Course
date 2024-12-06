@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Responsive with tailwind</title>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen pl-4 pr-4">
+    <h1 class="sm:text-2xl text-sm text-center pt-4 pb-4">
+      Learn about Responsive Design with tailwind
+    </h1>
+    <!-- EQUAL SECTIONS -->
+
+    <!-- <div class="grid pb-4 gap-4 sm:grid-cols-2">
+      <div class="min-h-24 rounded-lg shadow-md bg-orange-500"></div>
+      <div class="min-h-24 rounded-lg shadow-md bg-teal-500"></div>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 grid-cols-2">
+      <div class="min-h-24 rounded-lg shadow-md bg-red-500"></div>
+      <div class="min-h-24 rounded-lg shadow-md bg-green-500"></div>
+    </div> -->
+
+    <!-- <div class="grid pb-4 gap-4 sm:grid-cols-4">
+      <div class="min-h-24 rounded-lg shadow-md bg-orange-500"></div>
+      <div class="min-h-24 rounded-lg shadow-md bg-teal-500"></div>
+      <div class="min-h-24 rounded-lg shadow-md bg-red-500"></div>
+      <div class="min-h-24 rounded-lg shadow-md bg-purple-500"></div>
+    </div> -->
+
+    <!-- NON EQUAL SECTIONS -->
+
+    <!-- <div class="grid grid-cols-2 pb-4 gap-4 sm:grid-cols-12">
+      <div
+        class="sm:col-span-2 col-span-2 min-h-24 rounded-lg shadow-md bg-orange-500"
+      ></div>
+      <div
+        class="sm:col-span-10 min-h-24 rounded-lg shadow-md bg-teal-500"
+      ></div>
+      <div
+        class="sm:col-span-10 min-h-24 rounded-lg shadow-md bg-red-500"
+      ></div>
+      <div
+        class="sm:col-span-2 col-span-2 min-h-24 rounded-lg shadow-md bg-purple-500"
+      ></div>
+    </div> -->
+
+    <!-- Three column layout -->
+
+    <div class="sm:grid-cols-12 grid gap-4 pb-4">
+      <div
+        class="hidden sm:col-span-2 sm:block min-h-24 rounded-lg shadow-md bg-orange-500"
+      ></div>
+      <div
+        class="sm:col-span-10 md:col-span-8 min-h-24 rounded-lg shadow-md bg-blue-500"
+      ></div>
+      <div
+        class="hidden md:col-span-2 md:block min-h-24 rounded-lg shadow-md bg-red-500"
+      ></div>
+    </div>
+  </body>
+</html>
