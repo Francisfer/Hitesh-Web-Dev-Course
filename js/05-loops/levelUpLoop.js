@@ -143,4 +143,4 @@ for (const tea of all) {
   }
   shortTeas.push(tea);
 }
-console.log(shortTeas);
+// console.log(shortTeas);
