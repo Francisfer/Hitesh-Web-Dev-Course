@@ -31,7 +31,7 @@ function whatAmI(input) {
 
   return `I'm a ${value}!`;
 }
-console.log(whatAmI(""));
+// console.log(whatAmI(""));
 
 // 4. Write a function isItTruthy that takes an input and returns "It's truthy!" if the value is truthy in JavaScript, or "It's falsey!" if it's falsey.
 
@@ -44,3 +44,78 @@ function isItTruthy(input) {
   }
 }
 // console.log(isItTruthy(""));
+
+/* ----------------------------------------------------------------------------------------- */
+
+// 5. Perform the following mathematical operations on the provided variables a and b.
+
+// **** DO NOT CHANGE the values *****
+const a = 18;
+const b = 24;
+
+// Addition of two values
+function add() {
+  const result = a + b;
+  return result;
+}
+console.log(add(a, b));
+
+// Subtract small value from larger one
+function subtract() {
+  let result;
+  if (a > b) {
+    result = a - b;
+  } else if (a < b) {
+    result = b - a;
+  }
+  return result;
+}
+console.log(subtract());
+
+// Multiply
+function multiply(a, b) {
+  let result = a * b;
+  return result;
+}
+
+console.log(multiply(a, b));
+
+// Divide larger value by small
+function divide() {
+  let result;
+  if (a > b) {
+    result = a / b;
+  } else if (a < b) {
+    result = b / a;
+  }
+  return result;
+}
+console.log(divide(a, b));
+
+// Increase value of a by 1
+function increment() {
+  let result = a;
+  return ++result;
+}
+console.log(increment(a));
+
+// Decrease value of b by 1
+function decrement() {
+  let result = b;
+  return --result;
+}
+console.log(decrement(b));
+
+// Divide larger value by small to find the reminder
+function reminder() {
+  let result;
+  if (a > b) {
+    result = a % b;
+  } else if (a < b) {
+    result = b % a;
+  }
+  return result;
+}
+console.log(reminder(a, b));
+
+/* ----------------------------------------------------------------------------------------- */
