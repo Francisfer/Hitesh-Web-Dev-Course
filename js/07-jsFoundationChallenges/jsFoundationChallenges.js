@@ -58,7 +58,7 @@ function add() {
   const result = a + b;
   return result;
 }
-console.log(add(a, b));
+// console.log(add(a, b));
 
 // Subtract small value from larger one
 function subtract() {
@@ -70,7 +70,7 @@ function subtract() {
   }
   return result;
 }
-console.log(subtract());
+// console.log(subtract(a, b));
 
 // Multiply
 function multiply(a, b) {
@@ -78,7 +78,7 @@ function multiply(a, b) {
   return result;
 }
 
-console.log(multiply(a, b));
+// console.log(multiply(a, b));
 
 // Divide larger value by small
 function divide() {
@@ -90,21 +90,21 @@ function divide() {
   }
   return result;
 }
-console.log(divide(a, b));
+// console.log(divide(a, b));
 
 // Increase value of a by 1
 function increment() {
   let result = a;
   return ++result;
 }
-console.log(increment(a));
+// console.log(increment(a));
 
 // Decrease value of b by 1
 function decrement() {
   let result = b;
   return --result;
 }
-console.log(decrement(b));
+// console.log(decrement(b));
 
 // Divide larger value by small to find the reminder
 function reminder() {
@@ -116,6 +116,135 @@ function reminder() {
   }
   return result;
 }
-console.log(reminder(a, b));
+// console.log(reminder(a, b));
 
 /* ----------------------------------------------------------------------------------------- */
+
+/* 
+--> Arrays and Methods
+
+--> Utilize the inbuilt methods of arrays in Javascript to solve the below tasks:
+
+*/
+
+// 1. Array Filtering - Write a function filterNumbers(arr) that returns only numbers from a mixed array
+
+// function filterNumbers(arr) {
+//   return arr.filter((i) => typeof i === "number");
+// }
+
+///////////////////////////////////////////////////////////////
+
+// function filterNumbers(arr) {
+//   let onlyNumbers = [];
+
+//   arr.forEach((element) => {
+//     if (typeof element === "number") {
+//       onlyNumbers.push(element);
+//     }
+//   });
+//   return onlyNumbers;
+// }
+
+///////////////////////////////////////////////////////////////
+
+// function filterNumbers(arr) {
+//   let onlyNumbers = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === "number") {
+//       onlyNumbers.push(arr[i]);
+//     }
+//   }
+//   return onlyNumbers;
+// }
+
+///////////////////////////////////////////////////////////////
+
+// function filterNumbers(arr) {
+//   let onlyNumbers = [];
+//   for (const element of arr) {
+//     if (typeof element === "number") {
+//       onlyNumbers.push(element);
+//     }
+//   }
+//   return onlyNumbers;
+// }
+
+// 2. Array Reversal - Write a function reverseArray(arr) that reverses the array
+
+// function reverseArray(arr) {
+//   return arr.reverse();
+// }
+
+///////////////////////////////////////////////////////////////
+
+// function reverseArray(arr) {
+//   let reversed = [];
+//   for (const element of arr) {
+//     reversed.unshift(element);
+//   }
+//   return reversed;
+// }
+
+///////////////////////////////////////////////////////////////
+
+// function reverseArray(arr) {
+//   let reversed = [];
+
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     reversed.push(arr[i]);
+//   }
+//   return reversed;
+// }
+
+// 3. Find Maximum in an Array - Write a function findMax(arr) that returns the largest number in the array.
+
+// function findMax(arr) {
+//   return arr.reduce((acc, curr) => {
+//     if (acc < curr) {
+//       acc = curr;
+//     }
+//     return acc;
+//   });
+// }
+
+///////////////////////////////////////////////////////////////
+
+// let arr = [2, -2, 0, 4, 6, 9];
+// function findMax(arr) {
+//   let maxValue = [];
+//   for (const element of arr) {
+//     if (typeof element === "number" && maxValue < element) {
+//       maxValue = element;
+//     }
+//   }
+//   return maxValue;
+// }
+// console.log(findMax(arr));
+
+///////////////////////////////////////////////////////////////
+
+function findMax(arr) {
+  let max = Math.max(...arr);
+  return max;
+}
+
+// 4. Remove Duplicates from an Array - Write a function removeDuplicates(arr) that returns a new array with all duplicates removed.
+
+function removeDuplicates(arr) {
+  return arr.reduce((acc, curr) => {
+    if (!acc.includes(curr)) {
+      acc.push(curr);
+    }
+    return acc;
+  }, []);
+}
+
+///////////////////////////////////////////////////////////////
+
+// Flatten a Nested Array - Write a function flattenArray(arr) that takes a nested array and returns a single flattened array.
+
+function flattenArray(arr) {
+  return arr.flat();
+}
