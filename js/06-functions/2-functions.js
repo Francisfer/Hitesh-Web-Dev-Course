@@ -31,11 +31,12 @@ console.log(order);
 
 5. Write a function named createTeaMaker that returns another function. The returned function should take one parameter, teaType, and return a message like making green tea. Store the returned function in a variable named teaMaker and call it with green green tea.
 
+This exercise talks about closures.
 */
 
 const createTeaMaker = function () {
   return (teaType) => `Making ${teaType}`;
 };
 
-let teaMaker = createTeaMaker("green tea");
-console.log(teaMaker);
+let teaMaker = createTeaMaker();
+let tea = teaMaker("green tea");
