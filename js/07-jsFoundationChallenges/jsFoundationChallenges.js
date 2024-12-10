@@ -1,3 +1,5 @@
+///////////////////////// EXERCISE 30 - PLAYING WITH TYPES /////////////////////////
+
 // 1. Write a function stringToNumber that takes a string input and tries to convert it to a number. If the conversion fails, return "Not a number".
 
 function stringToNumber(input) {
@@ -45,9 +47,9 @@ function isItTruthy(input) {
 }
 // console.log(isItTruthy(""));
 
-/* ----------------------------------------------------------------------------------------- */
+///////////////////////// EXERCISE 31 - PLAYING WITH VARIABLES /////////////////////////
 
-// 5. Perform the following mathematical operations on the provided variables a and b.
+// 1. Perform the following mathematical operations on the provided variables a and b.
 
 // **** DO NOT CHANGE the values *****
 const a = 18;
@@ -118,7 +120,7 @@ function reminder() {
 }
 // console.log(reminder(a, b));
 
-/* ----------------------------------------------------------------------------------------- */
+///////////////////////// EXERCISE 32 - ARRAYS AND METHODS /////////////////////////
 
 /* 
 --> Arrays and Methods
@@ -232,19 +234,92 @@ function findMax(arr) {
 
 // 4. Remove Duplicates from an Array - Write a function removeDuplicates(arr) that returns a new array with all duplicates removed.
 
-function removeDuplicates(arr) {
-  return arr.reduce((acc, curr) => {
-    if (!acc.includes(curr)) {
-      acc.push(curr);
-    }
-    return acc;
-  }, []);
-}
+// function removeDuplicates(arr) {
+//   return arr.reduce((acc, curr) => {
+//     if (!acc.includes(curr)) {
+//       acc.push(curr);
+//     }
+//     return acc;
+//   }, []);
+// }
+///////////////////////////////////////////////////////////////
+// function removeDuplicates(arr) {
+//   let unique = [];
+//   arr.forEach((element) => {
+//     if (!unique.includes(element)) {
+//       unique.push(element);
+//     }
+//   });
 
+//   return unique;
+// }
+///////////////////////////////////////////////////////////////
+// let arr = [2, -2, 0, 4, 6, 9, 2, -2, 0, 4];
+function removeDuplicates(arr) {
+  let unique = [...new Set(arr)];
+  console.log(unique);
+  return unique;
+}
+// removeDuplicates(arr);
 ///////////////////////////////////////////////////////////////
 
-// Flatten a Nested Array - Write a function flattenArray(arr) that takes a nested array and returns a single flattened array.
+// 5. Flatten a Nested Array - Write a function flattenArray(arr) that takes a nested array and returns a single flattened array.
 
 function flattenArray(arr) {
   return arr.flat();
 }
+
+///////////////////////// EXERCISE 33 - LOOPS /////////////////////////
+
+/* 
+
+--> Loops
+
+*/
+
+// 1. Sum of First N Natural Numbers - Write a function sumOfN(n) that returns the sum of the first n natural numbers.
+
+function sumOfN(n) {
+  let sum = 0;
+
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+
+  return sum;
+}
+// console.log(sumOfN(7));
+
+// 2. Multiplication Table - Write a function printMultiplicationTable(n) that returns the multiplication table for n. Values return in the array must be of the format 2 * 2 = 4.
+
+function printMultiplicationTable(n) {
+  let table = [];
+
+  for (let i = 1; i < 11; i++) {
+    table.push(`${n} * ${i} = ${n * i}`);
+  }
+
+  return table;
+}
+// console.log(printMultiplicationTable(2));
+
+// 3. Count Vowels in a String - Write a function countVowels(str) that returns the number of vowels (in both lower & uppercase) in the given string str.
+
+let str = "a, A, b, c, d ,E , e, i, I";
+
+function countVowels(str) {
+  let vowels = "aAeEiIoOuU";
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    const element = str[i];
+    if (vowels.includes(element)) {
+      count++;
+    }
+  }
+  return count;
+}
+
+// console.log(countVowels(str));
+
+///////////////////////// EXERCISE 34 - HIGHER ORDER FUNCTIONS AND ARROW /////////////////////////
