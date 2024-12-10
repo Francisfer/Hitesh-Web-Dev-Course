@@ -323,3 +323,47 @@ function countVowels(str) {
 // console.log(countVowels(str));
 
 ///////////////////////// EXERCISE 34 - HIGHER ORDER FUNCTIONS AND ARROW /////////////////////////
+
+// --> All the following tasks must be strictly be written in arrow functions only.
+
+// 1. Using Array Methods. Write a function squareNumbers(arr) using map() and arrow functions.
+
+let arr = [2, -2, 0, 4, 6, 9, 2, -2, 0, 4];
+const squareNumbers = (arr) => arr.map((value) => value ** 2);
+// console.log(squareNumbers(arr));
+
+// 2. Custom Filter Function. Create a function filterEvenNumbers(arr) using filter() and arrow functions.
+
+const filterEvenNumbers = (arr) => arr.filter((value, i) => value % 2 === 0);
+// console.log(filterEvenNumbers(arr));
+
+// 3. Sum of Positive Numbers. Write a function sumPositiveNumbers(arr) that takes an array of numbers and returns the sum of all positive numbers using filter() and reduce() with arrow functions.
+
+const sumPositiveNumbers = (arr) =>
+  arr
+    .filter((value, i) => value > 0)
+    .reduce((acc, curr) => {
+      return (acc += curr);
+    }, 0);
+// console.log(sumPositiveNumbers(arr));
+
+// 4. Transform Array of Objects. Write a function getNames(arr) that takes an array of objects where each object has a name property, and returns an array of just the names using map() and arrow functions.
+
+let obj = [{ name: "Rose" }, { name: "John" }, { name: "Amy" }];
+const getNames = (arr) =>
+  arr.map((value, i) => {
+    return value["name"];
+  });
+// getNames(obj);
+
+// 5. Find the Longest Word. Write a function findLongestWord(arr) that takes an array of strings and returns the longest word using reduce() and an arrow function.
+let names = ["el", "jonas", "Francisco"];
+const findLongestWord = (arr) =>
+  arr.reduce((acc, current) => {
+    if (current.length > acc.length) acc = current;
+    return acc;
+  }, "");
+
+// console.log(findLongestWord(names));
+
+///////////////////////// EXERCISE 35 - NESTED FUNCTIONS AND CONTEXT /////////////////////////
